@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Borrar</th>
+            <th>Seleccionar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let articulo of articulos">
+            <th>{{articulo.codigo}}</th>
+            <td>{{articulo.descripcion}}</td>
+            <td>{{articulo.precio}}</td>
+            <td><input type="button" class="btn btn-danger" value="Borrar" (click)="borrar(articulo.codigo)"></td>
+            <td><input type="button" class="btn btn-secondary" value="Seleccionar" (click)="seleccionar(articulo.codigo)"></td>
+        </tr>
+    </tbody>
+    </table>
